@@ -11,6 +11,7 @@ class student {
     ensure  => directory,
     recurse => true,
     replace => false,
+    mode    => '0755',
     source  => '/usr/src/puppetlabs-training-bootstrap/scripts/classroom',
   }
 
