@@ -6,8 +6,6 @@ class student {
     mode  => '0644',
   }
 
-
-
   file { '/usr/bin/envpuppet':
     source => 'puppet:///modules/bootstrap/envpuppet',
     mode   => '0755',
@@ -20,12 +18,6 @@ class student {
     require => Class['localrepo'],
   }
 
-  # /etc/puppet/ssl is confusing to have around. Sloppy. Kill.
-  file {'/etc/puppet':
-    ensure  => absent,
-    recurse => true,
-    force   => true,
-  }
 
 
 
@@ -52,5 +44,7 @@ class student {
 
   # Network setttings
   include student::network
+  
+  # Clean up extranous build stuff
+  include student::cleanup
 }
-
