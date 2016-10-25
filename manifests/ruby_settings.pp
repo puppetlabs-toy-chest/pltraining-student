@@ -12,6 +12,6 @@ class student::ruby_settings{
   package { 'rubygems' :
     ensure  => present,
     require => Class['localrepo'],
-    before  => Class['bootstrap::cache_gems'],
+    before  => Class['bootstrap::profile::cache_gems'],
   }
 }

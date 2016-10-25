@@ -1,5 +1,4 @@
 class student::repos {
-  # yum repos
   yumrepo { 'puppetlabs':
     baseurl             => 'http://yum.puppetlabs.com/el/6/products/$basearch/',
     enabled             => '0',
@@ -10,10 +9,6 @@ class student::repos {
   }
   package { 'yum-plugin-priorities':
     ensure => installed,
-  }
-  package { 'yum-utils':
-    ensure => installed,
-    before => Class['localrepo'],
   }
   augeas { 'enable_yum_priorities':
     context => '/files/etc/yum/pluginconf.d/priorities.conf/main',

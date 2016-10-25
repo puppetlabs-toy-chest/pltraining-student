@@ -1,0 +1,15 @@
+fixtures:
+  symlinks:
+    student: "#{source_dir}"
+  repositories:
+    localrepo: "git@github.com:puppetlabs/pltraining-localrepo.git"
+    bootstrap: "git@github.com:puppetlabs/pltraining-bootstrap.git"
+  forge_modules:
+    stdlib:
+      repo: "puppetlabs/stdlib"
+      ref: "4.12.0"
+    userprefs:
+      repo: "pltraining/userprefs"
+    epel:
+      repo: "stahnma/epel"
+      ref: "1.2.2"

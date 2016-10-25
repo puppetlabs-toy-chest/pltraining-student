@@ -1,0 +1,34 @@
+{
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [ "6" ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": "3.3.x"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": "3.x"
+    }
+  ],
+  "name": "pltraining-student",
+  "version": "0.0.2",
+  "author": "pltraining",
+  "summary": "Module for Puppet Training VM. Not used.",
+  "license": "Apache License, Version 2.0",
+  "source": "https://github.com/puppetlabs/pltraining-student",
+  "project_page": "https://github.com/puppetlabs/pltraining-student",
+  "issues_url": "https://tickets.puppetlabs.com/browse/TRAINTECH",
+  "description": "Module for Puppet Training VM. Not used.",
+  "dependencies": [
+    { "name": "puppetlabs/stdlib",    "version_requirement": ">= 0.1.6"  },
+    { "name": "pltraining/userprefs", "version_requirement": ">= 1.0.17" },
+    { "name": "stahnma/epel",         "version_requirement": ">= 1.2.2" },
+    { "name": "pltraining/localrepo"},
+    { "name": "pltraining/bootstrap"}
+  ]
+}

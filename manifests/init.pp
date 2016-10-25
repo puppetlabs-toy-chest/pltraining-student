@@ -22,10 +22,10 @@ class student {
 
 
   # Cache forge modules locally in the vm:
-  class { 'bootstrap::cache_modules': cache_dir => '/usr/src/forge' }
+  class { 'bootstrap::profile::cache_modules': cache_dir => '/usr/src/forge' }
 
   # Cache gems locally in the vm:
-  class { 'bootstrap::cache_gems': }
+  class { 'bootstrap::profile::cache_gems': }
 
   # configure user environment
   include userprefs::defaults
